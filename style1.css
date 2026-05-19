@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: 'Courier New', monospace;
+}
+body {
+    background: #2a4b3e;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game-wrapper {
+    background: #7b5e3b;
+    padding: 30px 30px 40px;
+    border-bottom: 8px solid #a8885a;
+}
+h1 {
+    text-align: center;
+    color: #f9eec1;
+    font-size: 2.8rem;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+.stats {
+    background: #3f6123;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    color: #ffefc0;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 25px;
+    background: #9b7e5a;
+    padding: 25px;
+}
+.card {
+    width: 100px;
+    height: 100px;
+    background: #fdd998;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5rem;    cursor: pointer;
+        border: 3px solid #ffefc0;
+}
+.card.flipped {
+   background: #fff2d7;
+}
+.card.matched {
+    background: #a5d6a5;
+    cursor: default;
+       border-color: #f0f0a0;
+}
+.controls {
+    display: flex;
+    gap: 20px;
+       justify-content: center;
+    margin-top: 15px;
+}
+button {
+    background: #fdca40;
+    border: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 12px 35px;
+    border-radius: 60px;
+    color: #2a471a;
+    cursor: pointer;
+    transition: 0.05s linear;
+    border: 2px solid #ffe99b;
+}
+button:active {
+    transform: translateY(7px);
+}
+.message {
+    text-align: center;
+    margin: 8px 0 5px;
+    font-size: 1.5rem;
+    color: #ffecb3;
+    height: 20px;
+}
+       
