@@ -33,5 +33,27 @@
 <script src="jyfp1.js">
    
 </script>
+    <script>
+  function autoScale() {
+    // 1. 把 800 改成你游戏设计的实际宽度（比如所有卡牌加起来的总宽度）
+    const gameWidth = 800; 
+    
+    // 获取当前手机屏幕的宽度
+    const clientWidth = document.documentElement.clientWidth || window.innerWidth;
+    
+    // 如果屏幕比游戏窄，就计算缩放比例
+    if (clientWidth < gameWidth) {
+      const scale = clientWidth / gameWidth;
+      // 假设你的最外层游戏盒子的 class 叫 game-container，给它整体缩放
+      const container = document.querySelector('.game-container') || document.body;
+      
+      container.style.transform = `scale(${scale})`;
+      container.style.transformOrigin = 'top center'; // 以顶部中心为对齐点缩放
+    }
+  }
+  // 运行缩放
+  window.addEventListener('resize', autoScale);
+  autoScale();
+</script>
 </body>
 </html>
